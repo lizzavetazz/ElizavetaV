@@ -1,20 +1,10 @@
 from keyboard import*
-print("Kivi, Paber, Käärid")
-while True:
-    try:
-        if read_key()=="k":
-            print("Oli valitud kivi")
-    except:
-        ValueError
+from random import*
+from module1 import*
 v1=["Kivi,"Paber",Käärid"]
 v2=["Kivi,"Paber",Käärid"]
-m=3
-while m not in [1,2,3]:
-    try:
-        m=int(input("Kellega mängime?\n1 - inimestega\n2-robotiga\n3-robot-robotiga"))
-    except:
-        ValueError
 
+m=start()
 if m==1:
     print("Mängime inimestega")
     while True:
@@ -37,6 +27,13 @@ elif m==2:
         if p1==v: print ("2")
         #if p1=="3": print ("3")
        
+def bot_vs_bot(v1:list,v2:list):
+    """Robotote mäng
+    Tagastame m muutuja int formaadis
+    :param list v1: järjend esimese roboti jaoks
+    :param list v2: järjend teise roboti jaoks
+    """
+    :rtype: int
 elif m==3:
     print("Mängib robot-robotiga")
     while True:
@@ -71,10 +68,10 @@ elif comp == 2:
 elif comp == 3:
     print("Comp valis käärid")
 elif player == 1 and comp == 2:
-        win = 1
+    win = 1
 elif win == 0:
-        print("Viik!")
+    print("Viik!")
 elif win == 1:
-        print("Võitja on player!")
+    print("Võitja on player!")
 else win == 2:
-        print("Võitja on comp!")
+    print("Võitja on comp!")
