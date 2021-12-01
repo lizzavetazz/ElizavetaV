@@ -10,7 +10,8 @@ def loe_failist_listisse(file:str)->list:
 
 
 #1
-def lisa(palk,inimesed)
+
+def lisa(palk,inimesed):
     """Lisame veel inimesi ja nende palgad
     """
     a=input("Sisesta nimi=>")
@@ -40,8 +41,8 @@ def kustutamine(i,p): #удаляем человека из списка
 #7 
 def otsing_nimi_jargi(inimesed:list,palgad:list):
     """Tagastame järjed või tekst
-   :rtype var:tulemus
     """
+    :rtype var:tulemus
     nimi=input("Keda otsime?")
     for inimene in inimesed:
         if inimene==nimi:
